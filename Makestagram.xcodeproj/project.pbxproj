@@ -16,6 +16,9 @@
 		327C11C91F0FD61E0039443C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 327C11C81F0FD61E0039443C /* LaunchScreen.storyboard */; };
 		327C11D31F0FDF120039443C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 327C11D21F0FDF120039443C /* Login.storyboard */; };
 		327C11D51F0FDFC20039443C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327C11D41F0FDFC20039443C /* LoginViewController.swift */; };
+		32C706101F13FA5B00A1C1B6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C7060F1F13FA5B00A1C1B6 /* User.swift */; };
+		32C706121F14083300A1C1B6 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C706111F14083300A1C1B6 /* CreateUsernameViewController.swift */; };
+		32C706141F140F5800A1C1B6 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C706131F140F5800A1C1B6 /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		327C11C81F0FD61E0039443C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		327C11D21F0FDF120039443C /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Storyboards/Login.storyboard; sourceTree = "<group>"; };
 		327C11D41F0FDFC20039443C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
+		32C7060F1F13FA5B00A1C1B6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		32C706111F14083300A1C1B6 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
+		32C706131F140F5800A1C1B6 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		7C199B996DB98B8EAD9E4E41 /* Pods-Makestagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.release.xcconfig"; sourceTree = "<group>"; };
 		822C3BF6C3BE4860D21BD7F6 /* Pods_Makestagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Makestagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -95,6 +101,7 @@
 			children = (
 				327C11C61F0FD5170039443C /* ViewController.swift */,
 				327C11D41F0FDFC20039443C /* LoginViewController.swift */,
+				32C706111F14083300A1C1B6 /* CreateUsernameViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -126,6 +133,7 @@
 		327C11CF1F0FD7860039443C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				32C7060F1F13FA5B00A1C1B6 /* User.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -133,6 +141,7 @@
 		327C11D01F0FD78B0039443C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				32C706131F140F5800A1C1B6 /* UserService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -286,8 +295,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32C706101F13FA5B00A1C1B6 /* User.swift in Sources */,
 				327C11D51F0FDFC20039443C /* LoginViewController.swift in Sources */,
+				32C706141F140F5800A1C1B6 /* UserService.swift in Sources */,
 				327C11C71F0FD5170039443C /* ViewController.swift in Sources */,
+				32C706121F14083300A1C1B6 /* CreateUsernameViewController.swift in Sources */,
 				327C11AB1F0FC8710039443C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
