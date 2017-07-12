@@ -26,6 +26,9 @@
 		32C706221F154B2400A1C1B6 /* MGPhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C706211F154B2400A1C1B6 /* MGPhotoHelper.swift */; };
 		32C706241F155C7B00A1C1B6 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C706231F155C7B00A1C1B6 /* StorageService.swift */; };
 		32C706261F1562ED00A1C1B6 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C706251F1562ED00A1C1B6 /* PostService.swift */; };
+		32C706281F165B7800A1C1B6 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C706271F165B7800A1C1B6 /* Post.swift */; };
+		32C7062A1F16646C00A1C1B6 /* UIImage+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C706291F16646C00A1C1B6 /* UIImage+Size.swift */; };
+		32C7062C1F1666FF00A1C1B6 /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C7062B1F1666FF00A1C1B6 /* StorageReference+Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		32C706211F154B2400A1C1B6 /* MGPhotoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGPhotoHelper.swift; sourceTree = "<group>"; };
 		32C706231F155C7B00A1C1B6 /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		32C706251F1562ED00A1C1B6 /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		32C706271F165B7800A1C1B6 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		32C706291F16646C00A1C1B6 /* UIImage+Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Size.swift"; sourceTree = "<group>"; };
+		32C7062B1F1666FF00A1C1B6 /* StorageReference+Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StorageReference+Post.swift"; sourceTree = "<group>"; };
 		7C199B996DB98B8EAD9E4E41 /* Pods-Makestagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.release.xcconfig"; sourceTree = "<group>"; };
 		822C3BF6C3BE4860D21BD7F6 /* Pods_Makestagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Makestagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -137,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				32C706171F15228C00A1C1B6 /* Storyboard+Utility.swift */,
+				32C706291F16646C00A1C1B6 /* UIImage+Size.swift */,
+				32C7062B1F1666FF00A1C1B6 /* StorageReference+Post.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -153,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				32C7060F1F13FA5B00A1C1B6 /* User.swift */,
+				32C706271F165B7800A1C1B6 /* Post.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -321,10 +330,13 @@
 				327C11D51F0FDFC20039443C /* LoginViewController.swift in Sources */,
 				32C7061E1F1547EE00A1C1B6 /* MainTabBarController.swift in Sources */,
 				32C706141F140F5800A1C1B6 /* UserService.swift in Sources */,
+				32C706281F165B7800A1C1B6 /* Post.swift in Sources */,
+				32C7062A1F16646C00A1C1B6 /* UIImage+Size.swift in Sources */,
 				32C7061A1F153EBB00A1C1B6 /* HomeViewController.swift in Sources */,
 				32C706221F154B2400A1C1B6 /* MGPhotoHelper.swift in Sources */,
 				32C706181F15228C00A1C1B6 /* Storyboard+Utility.swift in Sources */,
 				32C7061C1F153ECC00A1C1B6 /* FindFriendsViewController.swift in Sources */,
+				32C7062C1F1666FF00A1C1B6 /* StorageReference+Post.swift in Sources */,
 				32C706161F150CF300A1C1B6 /* Constants.swift in Sources */,
 				32C706261F1562ED00A1C1B6 /* PostService.swift in Sources */,
 				32C706121F14083300A1C1B6 /* CreateUsernameViewController.swift in Sources */,
