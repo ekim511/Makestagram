@@ -29,6 +29,11 @@
 		32C706281F165B7800A1C1B6 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C706271F165B7800A1C1B6 /* Post.swift */; };
 		32C7062A1F16646C00A1C1B6 /* UIImage+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C706291F16646C00A1C1B6 /* UIImage+Size.swift */; };
 		32C7062C1F1666FF00A1C1B6 /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C7062B1F1666FF00A1C1B6 /* StorageReference+Post.swift */; };
+		32C7062E1F1670A200A1C1B6 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32C7062D1F1670A200A1C1B6 /* Home.storyboard */; };
+		32C706301F16A68D00A1C1B6 /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C7062F1F16A68D00A1C1B6 /* PostImageCell.swift */; };
+		32C706321F17AD1C00A1C1B6 /* PostHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C706311F17AD1C00A1C1B6 /* PostHeaderCell.swift */; };
+		32C706341F17B5BE00A1C1B6 /* PostActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C706331F17B5BE00A1C1B6 /* PostActionCell.swift */; };
+		32C706361F17DD5100A1C1B6 /* LikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C706351F17DD5100A1C1B6 /* LikeService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +61,11 @@
 		32C706271F165B7800A1C1B6 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		32C706291F16646C00A1C1B6 /* UIImage+Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Size.swift"; sourceTree = "<group>"; };
 		32C7062B1F1666FF00A1C1B6 /* StorageReference+Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StorageReference+Post.swift"; sourceTree = "<group>"; };
+		32C7062D1F1670A200A1C1B6 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = Storyboards/Home.storyboard; sourceTree = "<group>"; };
+		32C7062F1F16A68D00A1C1B6 /* PostImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostImageCell.swift; sourceTree = "<group>"; };
+		32C706311F17AD1C00A1C1B6 /* PostHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostHeaderCell.swift; sourceTree = "<group>"; };
+		32C706331F17B5BE00A1C1B6 /* PostActionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostActionCell.swift; sourceTree = "<group>"; };
+		32C706351F17DD5100A1C1B6 /* LikeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeService.swift; sourceTree = "<group>"; };
 		7C199B996DB98B8EAD9E4E41 /* Pods-Makestagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.release.xcconfig"; sourceTree = "<group>"; };
 		822C3BF6C3BE4860D21BD7F6 /* Pods_Makestagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Makestagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				327C11C01F0FD4C80039443C /* Main.storyboard */,
+				32C7062D1F1670A200A1C1B6 /* Home.storyboard */,
 				327C11D21F0FDF120039443C /* Login.storyboard */,
 				327C11B11F0FC8710039443C /* Assets.xcassets */,
 			);
@@ -172,6 +183,7 @@
 				32C706131F140F5800A1C1B6 /* UserService.swift */,
 				32C706231F155C7B00A1C1B6 /* StorageService.swift */,
 				32C706251F1562ED00A1C1B6 /* PostService.swift */,
+				32C706351F17DD5100A1C1B6 /* LikeService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -179,6 +191,9 @@
 		327C11D11F0FD7930039443C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				32C7062F1F16A68D00A1C1B6 /* PostImageCell.swift */,
+				32C706311F17AD1C00A1C1B6 /* PostHeaderCell.swift */,
+				32C706331F17B5BE00A1C1B6 /* PostActionCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -265,6 +280,7 @@
 				327C11C11F0FD4C80039443C /* Main.storyboard in Resources */,
 				327C11C91F0FD61E0039443C /* LaunchScreen.storyboard in Resources */,
 				327C11B21F0FC8710039443C /* Assets.xcassets in Resources */,
+				32C7062E1F1670A200A1C1B6 /* Home.storyboard in Resources */,
 				327C11D31F0FDF120039443C /* Login.storyboard in Resources */,
 				327C11C51F0FD5090039443C /* GoogleService-Info.plist in Resources */,
 			);
@@ -330,7 +346,10 @@
 				327C11D51F0FDFC20039443C /* LoginViewController.swift in Sources */,
 				32C7061E1F1547EE00A1C1B6 /* MainTabBarController.swift in Sources */,
 				32C706141F140F5800A1C1B6 /* UserService.swift in Sources */,
+				32C706341F17B5BE00A1C1B6 /* PostActionCell.swift in Sources */,
+				32C706361F17DD5100A1C1B6 /* LikeService.swift in Sources */,
 				32C706281F165B7800A1C1B6 /* Post.swift in Sources */,
+				32C706301F16A68D00A1C1B6 /* PostImageCell.swift in Sources */,
 				32C7062A1F16646C00A1C1B6 /* UIImage+Size.swift in Sources */,
 				32C7061A1F153EBB00A1C1B6 /* HomeViewController.swift in Sources */,
 				32C706221F154B2400A1C1B6 /* MGPhotoHelper.swift in Sources */,
@@ -340,6 +359,7 @@
 				32C706161F150CF300A1C1B6 /* Constants.swift in Sources */,
 				32C706261F1562ED00A1C1B6 /* PostService.swift in Sources */,
 				32C706121F14083300A1C1B6 /* CreateUsernameViewController.swift in Sources */,
+				32C706321F17AD1C00A1C1B6 /* PostHeaderCell.swift in Sources */,
 				327C11AB1F0FC8710039443C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
