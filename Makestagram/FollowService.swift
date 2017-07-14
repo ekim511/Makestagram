@@ -10,35 +10,71 @@ import Foundation
 import FirebaseDatabase
 
 struct FollowService {
-    private static func followUser(_ user : User, forCurrentUserWithSuccess success : @escaping (Bool) -> Void) {
-        //1 create a dictionary to update multiple locations at the same time. We set the appropriate key-value for our followers and following
+    private static func followUser(_ user: User, forCurrentUserWithSuccess success: @escaping (Bool) -> Void) {
         let currentUID = User.current.uid
-        let followData = ["followers/\(user.uid)/\(currentUID)" : true, "following/\(currentUID)/\(user.uid)" : true]
+        let followData = ["followers/\(user.uid)/\(currentUID)" : true,
+                          "following/\(currentUID)/\(user.uid)" : true]
         
-        //2 write our new relationship to Firebase
-        let ref = Database.database().reference().ref.updateChildValues(followData) { (error, _) in
+        let ref = Database.database().reference()
+        ref.updateChildValues(followData) { (error, _) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
+                success(false)
             }
-        
-        //3 return whether the update was successful based on whether there was an error
-            success(error == nil)
+            
+            // 1 get all posts for the user. We can reuse the service method that we previously used to display all of our posts
+            UserService.posts(for: user) { (posts) in
+                // 2 get all of the post keys for that user's posts. This will allow us to write each post to our own timeline
+                let postKeys = posts.flatMap { $0.key }
+                
+                // 3 build a multiple location update using a dictionary that adds each of the followee's post to our timeline
+                var followData = [String : Any]()
+                let timelinePostDict = ["poster_uid" : user.uid]
+                postKeys.forEach { followData["timeline/\(currentUID)/\($0)"] = timelinePostDict }
+                
+                // 4 write the dictionary to our database
+                ref.updateChildValues(followData, withCompletionBlock: { (error, ref) in
+                    if let error = error {
+                        assertionFailure(error.localizedDescription)
+                    }
+                    
+                    // 5 return success based on whether we received an error
+                    success(error == nil)
+                })
+            }
         }
     }
     
-    private static func unfollowUser(_ user : User, forCurrentUserWithSuccess success : @escaping (Bool) -> Void) {
-        //1 create a dictionary to update multiple locations at the same time. We set the appropriate key-value for our followers and following
+    private static func unfollowUser(_ user: User, forCurrentUserWithSuccess success: @escaping (Bool) -> Void) {
         let currentUID = User.current.uid
-        let followData = ["followers/\(user.uid)/\(currentUID)" : NSNull(), "following/\(currentUID)/\(user.uid)" : NSNull()]
+        // Use NSNull() object instead of nil because updateChildValues expects type [Hashable : Any]
+        // http://stackoverflow.com/questions/38462074/using-updatechildvalues-to-delete-from-firebase
+        let followData = ["followers/\(user.uid)/\(currentUID)" : NSNull(),
+                          "following/\(currentUID)/\(user.uid)" : NSNull()]
         
-        //2 write our new relationship to Firebase
-        let ref = Database.database().reference().ref.updateChildValues(followData) { (error, _) in
+        let ref = Database.database().reference()
+        ref.updateChildValues(followData) { (error, ref) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
+                return success(false)
             }
             
-            //3 return whether the update was successful based on whether there was an error
-            success(error == nil)
+            UserService.posts(for: user, completion: { (posts) in
+                var unfollowData = [String : Any]()
+                let postsKeys = posts.flatMap { $0.key }
+                postsKeys.forEach {
+                    // Use NSNull() object instead of nil because updateChildValues expects type [Hashable : Any]
+                    unfollowData["timeline/\(currentUID)/\($0)"] = NSNull()
+                }
+                
+                ref.updateChildValues(unfollowData, withCompletionBlock: { (error, ref) in
+                    if let error = error {
+                        assertionFailure(error.localizedDescription)
+                    }
+                    
+                    success(error == nil)
+                })
+            })
         }
     }
     

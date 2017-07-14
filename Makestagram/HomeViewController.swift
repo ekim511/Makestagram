@@ -19,19 +19,27 @@ class HomeViewController : UIViewController {
     //MARK - Properties
     
     var posts = [Post]()
+    let refreshControl = UIRefreshControl()
     
     //MARK - Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //to fetch our posts from Firebase
-        UserService.posts(for: User.current) { (posts) in
+        configureTableView()
+        reloadTimeline()
+    }
+    
+    func reloadTimeline() {
+        UserService.timeline { (posts) in
             self.posts = posts
+            
+            if self.refreshControl.isRefreshing {
+                self.refreshControl.endRefreshing()
+            }
+            
             self.tableView.reloadData()
         }
-        
-        configureTableView()
     }
     
     func configureTableView() {
@@ -39,6 +47,10 @@ class HomeViewController : UIViewController {
         tableView.tableFooterView = UIView()
         // remove separators from cells
         tableView.separatorStyle = .none
+        
+        // add pull to refresh
+        refreshControl.addTarget(self, action: #selector(reloadTimeline), for: .valueChanged)
+        tableView.addSubview(refreshControl)
     }
 
     //date formatter allows us to convert a Date into a formatted string. We'll use this to display the date our post was created
@@ -64,7 +76,7 @@ extension HomeViewController: UITableViewDataSource {
             
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "PostHeaderCell") as! PostHeaderCell
-            cell.userNameLabel.text = User.current.username
+            cell.userNameLabel.text = post.poster.username
             
             return cell
             
@@ -95,6 +107,8 @@ extension HomeViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return posts.count
     }
+    
+    
 }
 
 // MARK: - UITableViewDelegate
