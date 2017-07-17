@@ -37,6 +37,7 @@
 		32C706381F17F73C00A1C1B6 /* FollowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C706371F17F73C00A1C1B6 /* FollowService.swift */; };
 		32C7063A1F18071B00A1C1B6 /* FindFriends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32C706391F18071B00A1C1B6 /* FindFriends.storyboard */; };
 		32C7063C1F18FDFD00A1C1B6 /* FindFriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C7063B1F18FDFD00A1C1B6 /* FindFriendsCell.swift */; };
+		32C7063E1F19454D00A1C1B6 /* DatabaseReference+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C7063D1F19454D00A1C1B6 /* DatabaseReference+Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		32C706371F17F73C00A1C1B6 /* FollowService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowService.swift; sourceTree = "<group>"; };
 		32C706391F18071B00A1C1B6 /* FindFriends.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FindFriends.storyboard; path = Storyboards/FindFriends.storyboard; sourceTree = "<group>"; };
 		32C7063B1F18FDFD00A1C1B6 /* FindFriendsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindFriendsCell.swift; sourceTree = "<group>"; };
+		32C7063D1F19454D00A1C1B6 /* DatabaseReference+Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DatabaseReference+Location.swift"; sourceTree = "<group>"; };
 		7C199B996DB98B8EAD9E4E41 /* Pods-Makestagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.release.xcconfig"; sourceTree = "<group>"; };
 		822C3BF6C3BE4860D21BD7F6 /* Pods_Makestagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Makestagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -163,6 +165,7 @@
 				32C706171F15228C00A1C1B6 /* Storyboard+Utility.swift */,
 				32C706291F16646C00A1C1B6 /* UIImage+Size.swift */,
 				32C7062B1F1666FF00A1C1B6 /* StorageReference+Post.swift */,
+				32C7063D1F19454D00A1C1B6 /* DatabaseReference+Location.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				32C706221F154B2400A1C1B6 /* MGPhotoHelper.swift in Sources */,
 				32C706181F15228C00A1C1B6 /* Storyboard+Utility.swift in Sources */,
 				32C7061C1F153ECC00A1C1B6 /* FindFriendsViewController.swift in Sources */,
+				32C7063E1F19454D00A1C1B6 /* DatabaseReference+Location.swift in Sources */,
 				32C7062C1F1666FF00A1C1B6 /* StorageReference+Post.swift in Sources */,
 				32C706161F150CF300A1C1B6 /* Constants.swift in Sources */,
 				32C706261F1562ED00A1C1B6 /* PostService.swift in Sources */,
